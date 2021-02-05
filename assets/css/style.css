@@ -29,6 +29,11 @@ header{
 
 }
 
+header h1{
+    padding: 0 0 0 25px;
+    font-size: 2vw;
+}
+
 header h1 a, header nav ul li a{
     text-decoration: none;
     color: var(--gold)
@@ -67,11 +72,12 @@ header nav ul li a{
 /*About Me Styling */
 .flex-title{
     color: var(--gold);
+    font-size: 1.3vw;
     display:flex;
     flex-wrap: wrap;
     align-items: top;
     width: 100%;
-    padding: 10px 0 10px 30px;
+    padding: 30px 0 30px 150px;
 }
 .primary-content{
     width: 100%;
@@ -103,4 +109,70 @@ header nav ul li a{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+}
+
+/* My Work Styling */
+
+.secondary-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue)
+}
+
+.my-work-img{
+    margin: 0 30px 0 30px;
+    width: 30%;
+}
+
+.my-work-img img{
+    width: 100%;
+}
+.work-title-top{
+    width: 15%;
+}
+
+.work-title-bottom{
+    width: 15%;
+}
+/* Contact Me Styling */
+
+.contactainer{
+    height: 600px;
+    width: 31%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-img{
+    width: 31%;
+}
+
+.contact-box{
+    margin: 0 auto;
+    padding: 50px;
+    flex: 0 0 33%;
+}
+
+
+/* Footer Styling */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    background-color: var(--maroon);
+    min-height: 5vh;
+    padding: 0 30px 0 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 20px;
 }

@@ -29,7 +29,9 @@ header{
     background-color: var(--maroon);
     color: var(--gold);
     min-height: 10vh;
+    position: -webkit-sticky;
     position: sticky;
+    top: 0;
 
 }
 
@@ -189,8 +191,10 @@ header nav ul li a{
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    opacity: 75%;
 }
+
 .work-title-bottom{
     grid-area: 10 / 7 / 10 / 9;
     z-index: 9997;
@@ -199,28 +203,57 @@ header nav ul li a{
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    opacity: 75%;
 }
 
 /* Contact Me Styling */
 
 .contactainer{
-    height: 600px;
-    width: 31%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
 }
 
-.contact-img{
-    width: 31%;
+.box1{
+    grid-area: 1 / 1 / 2 / 1;
+}
+
+.box2{
+    grid-area: 2 / 1 / 2 / 2;
+}
+
+.box3{
+    grid-area: 3 / 1 / 3 / 2;
+}
+
+.box4{
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.box5{
+    grid-area: 1 / 3 / 1 / 3;
+}
+
+.box6{
+    grid-area: 2 / 3 / 2 / 3;
+}
+
+.box7{
+    grid-area: 3 / 3 / 3 / 3;
 }
 
 .contact-box{
-    margin: 0 auto;
-    padding: 50px;
-    flex: 0 0 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gold);
+    margin: 30px 125px;
+    background-color: var(--green);
+    border-radius: 20px;
 }
 
 
@@ -232,7 +265,7 @@ footer{
     align-items: center;
     z-index: 9998;
     background-color: var(--maroon);
-    min-height: 5vh;
+    height: 5vh;
     padding: 0 30px 0 30px;
 }
 

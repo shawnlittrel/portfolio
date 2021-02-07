@@ -28,7 +28,7 @@ header{
     z-index: 9999;
     background-color: var(--maroon);
     color: var(--gold);
-    min-height: 10vh;
+    /* min-height: 10vh; */
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -309,4 +309,115 @@ footer a{
     text-decoration: none;
     color: var(--gold);
     font-size: 20px;
+}
+
+@media screen and (max-width: 980px){
+ /* Header */   
+    header{
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+}
+
+    header h1{
+        margin: 0 auto;
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header h1 a{
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    header nav ul li a{
+        padding: 10px;
+    }
+
+    /* About Me */ 
+    .flex-title{
+        justify-content: center;
+        font-size: 2vw;
+        padding: 20px;
+    }
+    .primary-content{
+        justify-content: center;
+    }
+    .left-box{
+        width:100%;
+        margin: 5px;
+    }
+
+    .center-box{
+        width: 50%;
+        margin: 5px;
+    }
+
+    .right-box{
+        width: 100%;
+        margin: 5px;
+    }
+
+    /* My Work */
+
+    .work-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .work-title-top{
+        margin: 5px 5px 30px 5px;
+    }
+
+    .work-title-bottom{
+        margin: 30px 5px 5px 5px;
+    }
+
+    /* Contact Me */
+
+    .contactainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mobile-box{
+        width: 30%;
+        margin: 5px auto;
+    }
+
+    .mobile-img{
+        width: 80%;
+        order: 7;
+    }
+
+    .mobile-img img{
+        width: 300px;
+        height: 400px;
+    }
+}
+    @media screen and (max-width: 768px){
+
+        nav ul li a{
+            font-size: 2vw;
+        }
+        .flex-title{
+            font-size: 5vw;
+        }
+
+        .cert-box{
+            font-size: small;
+        }
+
+        .mobile-box{
+            width: 60%;
+        }
 }

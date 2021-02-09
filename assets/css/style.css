@@ -414,6 +414,11 @@ footer a{
             height: 30em;
         }
 
+        .center-box img{
+            width: 18em;
+            height: 28em;
+        }
+
 
         nav ul li a{
             font-size: 2vw;

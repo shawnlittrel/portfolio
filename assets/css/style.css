@@ -122,6 +122,10 @@ header nav ul li a{
     color: var(--gold);
 }
 
+.center-box{
+    display: flex;
+}
+
 .abt-me-img{
     width: 31%;
 }
@@ -406,8 +410,8 @@ footer a{
 }
     @media screen and (max-width: 768px){
         .center-box{
-            width: 45em;
-            height: 35em;
+            width: 30em;
+            height: 30em;
         }
 
 

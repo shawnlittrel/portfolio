@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Personal Portfolio
 
 **Description**
@@ -19,15 +18,10 @@ Each method of contact is a link that the user can click on to directly interact
 
 **Screenshots**
 ---
-![Screenshot] (/assets/images/top-screenshot.JPG)
+![Screenshot] (/assets/images/top-screenshot.JPG?raw=true "Top of Site")
 
 ![Screenshot] (/assets/images/bottom-screenshot.jpg)
 
 **See site in action**
 ---
 http://www.meticulousinnovation.dev
-
-
-=======
-# portfolio
->>>>>>> da4015662c1b891ae49d41af981d2b7f29e2c764

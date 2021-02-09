@@ -409,6 +409,20 @@ footer a{
     }
 }
     @media screen and (max-width: 768px){
+        header h1{
+            font-size: .8em;
+        }
+        header nav{
+            margin: 0 auto;
+            padding: 1em;
+            width: 75%;
+            line-height: 1.3;
+        }
+
+        header nav ul li a{
+            padding: 10px;
+            font-size: 2em;
+        }
         .center-box{
             width: 30em;
             height: 30em;
@@ -432,6 +446,6 @@ footer a{
         }
 
         .mobile-box{
-            width: 60%;
+            width: 75%;
         }
 }

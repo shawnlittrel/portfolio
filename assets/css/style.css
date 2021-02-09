@@ -406,7 +406,8 @@ footer a{
 }
     @media screen and (max-width: 768px){
         .center-box{
-            width: 75vw;
+            width: 30em;
+            height: 35em;
         }
 
 

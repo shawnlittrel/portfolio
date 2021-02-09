@@ -18,9 +18,9 @@ Each method of contact is a link that the user can click on to directly interact
 
 **Screenshots**
 ---
-![Screenshot] (./assets/images/top-screenshot.jpg)
+![Screenshot] (/assets/images/top-screenshot.jpg)
 
-![Screenshot] (./assets/images/bottom-screenshot.jpg)
+![Screenshot] (/assets/images/bottom-screenshot.jpg)
 
 **See site in action**
 ---

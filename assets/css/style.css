@@ -405,6 +405,10 @@ footer a{
     }
 }
     @media screen and (max-width: 768px){
+        .center-box{
+            width: 75vw;
+        }
+
 
         nav ul li a{
             font-size: 2vw;

@@ -28,7 +28,7 @@
 }
 
 .carousel-item{
-    height: 400px;
+    height: 600px;
 }
 
 .item img{
@@ -39,6 +39,6 @@
     min-height: 400px;
 }
 .carouselText{
-    color: white;
+    color: #17a2b8;
     background-color: rgba(53, 51, 51, 0.9);
 }

@@ -32,7 +32,7 @@
         <div class="container">
         <section id="navgroups">
             <div class="row align-items-center">
-            <div class="col-md col-lg-4">
+            <div class="col-md col-lg-4" id="aboutMeEl">
                     <div class="text-center text-info thirds-title" id="aboutMeTitle">
                        About Me 
                     </div>
@@ -42,7 +42,7 @@
                 </div>
             
                 <br />
-                <div class="col-md col-lg-4">
+                <div class="col-md col-lg-4" id="myWorkEl">
                     <div class="text-center text-info thirds-title" id="myWorkTitle">
                        My Work 
                     </div>
@@ -51,7 +51,7 @@
                     </div>    
                 </div>
                 <br />
-                <div class="col-md col-lg-4">
+                <div class="col-md col-lg-4" id="contactEl">
                     <div class="text-center text-info thirds-title" id="contactMeTitle">
                        Contact 
                     </div>
@@ -70,7 +70,7 @@
                       <h2 class="section-title">About Me</h2>  
                     </div>
                     <div class="col">
-                        Go Back
+                        <button type="button" class="btn btn-secondary goBack">Go Back</button>
                     </div>
                     
                 </div> 
@@ -155,7 +155,7 @@
                       <p>View live applications by clicking an image. All published work is detailed on GitHub.</p>  
                     </div>
                     <div class="col">
-                        Go Back
+                        <button type="button" class="btn btn-secondary goBack">Go Back</button>
                     </div>
                   <div class="row">
                       <div class="col align-self-center">
@@ -206,6 +206,14 @@
           <div class="container">
             <br />
               <section id="contact-me">
+                  <div class="row">
+                    <div class="col-11">
+                        <h2 class="section-title">Contact</h2>
+                    </div>
+                    <div class="col-1">
+                        <button type="button" class="btn btn-secondary goBack">Go Back</button>
+                    </div>
+                  </div>
                   <div class="row text-center">
                       <div class="col-sm-6">
                         <a href="tel:602-517-8098">P: 602-517-8098</a>
@@ -238,10 +246,19 @@
                   </div>
               </section>
           </div>
+    </div>
+    <div class="row">
+        <div class="col text-center bg-dark bg-gradient">
+            <h2>
+                <a href="http://www.meticulousinnovation.dev"> &copy 2021 Shawn Littrel</a>
+            </h2>  
         </div>
     </div>
+        <footer>
 
+        </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </body>
+    <script src="./assets/js/script.js"></script>
+</body>
 </html>

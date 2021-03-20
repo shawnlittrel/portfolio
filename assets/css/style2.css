@@ -18,14 +18,15 @@
 .thirds-title{
     background-color: rgba(69, 66, 66, 0.7);
     font-family: "Cinzel decorative", cursive;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 .section-title{
     font-family: "Cinzel decorative", cursive;
     color: #17a2b8;
     font-weight: bold;
-    text-shadow: 1px 1px 3px black, 0 0 15px white; 
+    text-shadow: 1px 1px 3px black, 0 0 15px white;
+    font-size: 3rem; 
 }
 
 .thirds-text{
@@ -60,10 +61,19 @@
 .contact-text{
     text-decoration: none;
     font-family: "Roboto", cursive;
-
+    color: #17a2b8;
+    font-size: 1.3rem;
 }
 
-.goBack{
-    
-    white-space: normal;
+.contact-item{
+    background-color:rgba(53, 51, 51, 0.9);
+}
+
+.attention{
+    font-size: 1.5rem;
+}
+
+.badge{
+    font-size: 1.3rem;
+    margin: 3px;
 }

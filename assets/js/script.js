@@ -28,26 +28,18 @@ function toggleNavGroups(){
 
 function showAboutMe(){
         //toggle state of navgroups
-        $("#about-me").show("slow")
+        $("#about-me").show("slow");
 };
 
 function showMyWork(){
     //toggle state of navgroups
-    $("#my-work").animate({
-        opacity: 1,
-        left: "+=50",
-        height: "toggle"
-    }, 1000
-)};
+    $("#my-work").show("slow");
+};
 
 function showContact(){
     //toggle state of navgroups
-    $("#contact-me").animate({
-        opacity: 1,
-        left: "+=50",
-        height: "toggle"
-    }, 1000
-)};
+    $("#contact-me").show("slow");
+};
 
 function hideContentInitial(){
     $("#about-me").hide();

@@ -10,11 +10,12 @@
       href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style2.css" />
     <title>&#127790; Shawn Littrel &#128187;</title>
   </head>
   <body>
-    <div class="homePage">
+    <div class="homePage overflow-auto">
         <div class="container">
             <div class="row">
                 <section class="header-title text-info text-center">
@@ -65,14 +66,13 @@
           <div class="container"> 
             <br /> 
             <section id="about-me">
-                <div class="row">
-                    <div class="col-11">
-                      <h2 class="section-title">About Me</h2>  
+                <div class="row mx-3 my-3">
+                    <div class="col-auto me-auto">
+                        <h2 class="section-title">About Me</h2>  
                     </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary goBack">Go Back</button>
-                    </div>
-                    
+                    <div class="col-auto">
+                               <button type="button" class="btn btn-secondary goBack">Back</button> 
+                    </div>                   
                 </div> 
                 <div class="row">
                 <div class="col-md col-lg-4">
@@ -82,8 +82,7 @@
                     <br />
                     <br />
                         <span class="badge bg-success text-light">BS Electronics Engineering</span>                       
-                        <span class="badge bg-success text-light">Control4 Certified Programmer</span>                       
-                        <span class="badge bg-success text-light">Savant Certified Programmer</span>                       
+                        <span class="badge bg-success text-light">Microsoft MTA - SQL</span>
                         <span class="badge bg-success text-light">HTML</span>                        
                         <span class="badge bg-success text-light">CSS</span>
                         <span class="badge bg-success text-light">CSS Frameworks</span>
@@ -91,6 +90,11 @@
                         <span class="badge bg-success text-light">JQuery</span>
                         <span class="badge bg-success text-light">AJAX</span>
                         <span class="badge bg-success text-light">GitHub</span>
+                        <span class="badge bg-success text-light">Control4 Certified Programmer</span>                       
+                        <span class="badge bg-success text-light">Savant Certified Programmer</span>
+                        <span class="badge bg-success text-light">Crestron Level 1 Programmer</span>
+                        <span class="badge bg-success text-light">Qsys Certified Programmer</span>
+                        <span class="badge bg-success text-light">Dante Audio Expert</span>
                         <br />
                         <br />
                         <br />
@@ -149,13 +153,17 @@
           <div class="container">
             <br />
               <section id="my-work">
-                <div class="row">
-                    <div class="col-11">
-                      <h2 class="section-title">My Work</h2>
-                      <p>View live applications by clicking an image. All published work is detailed on GitHub.</p>  
+                <div class="row mx-3 my-3">
+                    <div class="col-auto me-auto">
+                      <h2 class="section-title">My Work</h2> 
                     </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary goBack">Go Back</button>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-secondary goBack">Back</button>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>View live applications by clicking an image. All published work is detailed on GitHub.</p> 
+                        </div>
                     </div>
                   <div class="row">
                       <div class="col align-self-center">
@@ -206,42 +214,66 @@
           <div class="container">
             <br />
               <section id="contact-me">
-                  <div class="row">
-                    <div class="col-11">
+                  <div class="row mx-3 my-3">
+                    <div class="col-auto me-auto">
                         <h2 class="section-title">Contact</h2>
                     </div>
-                    <div class="col-1">
-                        <button type="button" class="btn btn-secondary goBack">Go Back</button>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-secondary goBack">Back</button>
                     </div>
                   </div>
-                  <div class="row text-center">
-                      <div class="col-sm-6">
-                        <a href="tel:602-517-8098">P: 602-517-8098</a>
+                  <div class="row text-center justify-content-evenly">
+                      <div class="col-sm-2">
+                          <div class="card contact-item">
+                              <div class="card-body">
+                                 <a href="tel:602-517-8098" class="contact-text">P: 602-517-8098</a> 
+                              </div>
+                          </div>                        
                       </div>
-                      <div class="col-sm-6">
-                        <a href="mailto:shawnlittrel@gmail.com" target="_blank">shawnlittrel@gmail.com</a>  
+                      <div class="col-sm-2">
+                          <div class="card">
+                              <div class="card-body">
+                                <a href="https://github.com/shawnlittrel" target="_blank" class="contact-text">GitHub </a> 
+                              </div>
+                          </div>                
                       </div>
                   </div>
                   <br />
-                  <div class="row text-center">
-                    <div class="col-sm-6">
-                        <a href="https://github.com/shawnlittrel" target="_blank">GitHub </a>
+                  <div class="row text-center justify-content-evenly">
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="mailto:shawnlittrel@gmail.com" target="_blank" class="contact-text">shawnlittrel@gmail.com</a>                               
+                            </div>
+                        </div>            
                     </div>
-                    <div class="col-sm-6">
-                        <a href="mailto:shawnlittrel@protonmail.com" target="_blank">shawnlittrel@protonmail.com </a> 
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <div class="card-body">
+                               <a href="mailto:shawnlittrel@protonmail.com" target="_blank" class="contact-text">shawnlittrel@protonmail.com </a> 
+                            </div>
+                        </div>                        
                     </div>
                   </div>
                   <br />
-                  <div class="row text-center">
-                    <div class="col-sm-6">
-                        <a href="https://www.linkedin.com/in/shawn-littrel-063588139/" target="_blank">LinkedIn</a> 
+                  <div class="row text-center justify-content-evenly">
+                    <div class="col-sm-2">
+                        <div class="card" class="contact-text">
+                            <div class="card-body">
+                               <a href="https://www.linkedin.com/in/shawn-littrel-063588139/" target="_blank" class="contact-text">LinkedIn</a>  
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6">
-                        <address>
-                            7396 W Utopia Rd <br />
-                            Glendale, AZ <br />
-                            85308
-                        </address>
+                    <div class="col-sm-2">
+                        <div class="card" class="contact-item">
+                            <div class="card-body contact-text">
+                                <address>
+                                7396 W Utopia Rd <br />
+                                Glendale, AZ <br />
+                                85308
+                                </address> 
+                            </div>
+                        </div>                        
                     </div>
                   </div>
               </section>

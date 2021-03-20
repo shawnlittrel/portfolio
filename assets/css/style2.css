@@ -17,8 +17,22 @@
 
 .thirds-title{
     background-color: rgba(69, 66, 66, 0.7);
-    font-family: "Montserrat", cursive;
+    font-family: "Cinzel decorative", cursive;
     font-size: 1.3rem;
+}
+
+.section-title{
+    font-family: "Cinzel decorative", cursive;
+    color: #17a2b8;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black, 0 0 15px white; 
+}
+
+.thirds-text{
+    background-color: rgba(69, 66, 66, 0.7);
+    font-family: "Roboto", cursive;
+    color: white;
+    font-size: 1.1rem;
 }
 
 .columnImg{
@@ -41,4 +55,15 @@
 .carouselText{
     color: #17a2b8;
     background-color: rgba(53, 51, 51, 0.9);
+}
+
+.contact-text{
+    text-decoration: none;
+    font-family: "Roboto", cursive;
+
+}
+
+.goBack{
+    
+    white-space: normal;
 }

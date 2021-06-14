@@ -8,32 +8,46 @@ function App() {
   const navCategories = [
     {
       name: "about",
+      text: "About Me"
     },
     {
       name: "projects",
+      text: "Projects"
+
     },
     {
       name: "resume",
+      text: "Resume"
+
     },
     {
       name: "contact",
+      text: "Contact Me"
+
     },
   ];
 
   const [currentCategory, setCurrentCategory] = useState(navCategories[0]);
 
+  const pageStyle = {
+    paddingBottom: '5rem'
+  }
   return (
-    <div>
+    <div style={pageStyle}>
       <Nav
         navCategories={navCategories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       />
       <main> 
-        <Content
+        <div className="container">
+                  <Content
           currentCategory={currentCategory}
           setCurrentCategory={setCurrentCategory}
+          navCategories={navCategories}
         />
+        </div>
+
       </main>
       <Footer />
     </div>

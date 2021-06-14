@@ -6,7 +6,7 @@ import Nav from '../index.js';
 const navCategories = [
      {
        name: "about"
-     }
+     },
 ];
 
 const mockCurrentCategory = jest.fn();

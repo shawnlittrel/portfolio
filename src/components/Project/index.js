@@ -1,8 +1,9 @@
+import { auto } from "async";
 import React, { useState } from "react";
 import Modal from "react-modal";
 
 function Projects() {
-     //log all projects we want to display
+  //log all projects we want to display
   const projectList = [
     {
       title: "Oh-Snap",
@@ -74,41 +75,20 @@ function Projects() {
     left: "2vw",
   };
 
-//determine current project
-const [currentProject, setCurrentProject] = useState({
-     title: "",
-     description: "",
-     tech: "",
-     image: "",
-     type: ""
-});
+  //manual styling for modal
+  const modalStyle = {
+    width: "100%",
+    height: "auto"
+  }
 
-//set current project on click
-function clickProject(title) {
-     if (title === "Oh-Snap") {
-          setCurrentProject(projectList[0])
-     }
-     else if (title === 'Budget Tracker') {
-          setCurrentProject(projectList[1])
-     }
-     else if (title === 'Social Network API') {
-          setCurrentProject(projectList[2])
-     }
-     else if (title === 'Campfire') {
-          setCurrentProject(projectList[3])
-     }
-     else if (title === 'Tech Blog') {
-          setCurrentProject(projectList[4])
-     }
-     else if (title === 'Notebook') {
-          setCurrentProject(projectList[5])
-     }
-     else if (title === 'Jobless') {
-          setCurrentProject(projectList[6])
-     }
-
-}
-
+  //determine current project
+  const [currentProject, setCurrentProject] = useState({
+    title: "",
+    description: "",
+    tech: "",
+    image: "",
+    type: "",
+  });
 
   //monitor status of modal visibility
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -118,14 +98,14 @@ function clickProject(title) {
   }
 
   //sync and access references
-  function afterOpenModal(title) {}
+  function afterOpenModal() {
+  }
 
   function closeModal() {
     setIsOpen(false);
   }
 
-  console.log('current proj', currentProject);
-  console.log('modal', modalIsOpen);
+
 
   //const projectFilter = projectList.filter((project) => projectList.type === type);
 
@@ -156,21 +136,20 @@ function clickProject(title) {
           </div>
         </div>
         <div className="col-sm-11">
-          {projectList.map((project) => (
-            <div 
-            className="card-wrapper" 
-            style={cardStyle}         
-            >
-              <div 
-              className="card" 
-              key={project.id} 
-              onClick={openModal}
+          {projectList.map((project, i) => (
+            <div className="card-wrapper" style={cardStyle}>
+              <div
+                className="card"
+                key={i}
+                onClick={() => {
+                  setCurrentProject(projectList[i]);
+                  openModal();
+                }}
               >
                 <img
                   className="card-img-top"
                   src={project.image}
                   alt={project.title}
-                  onClick={clickProject(project.title)}
                 />
                 <h5 className="card-title">{project.title}</h5>
               </div>
@@ -183,7 +162,26 @@ function clickProject(title) {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         currentProject={currentProject}
-      />
+      >
+        <div>
+          <h2>{currentProject.title}</h2>
+          <button
+            type="button"
+            onClick={closeModal}
+            class="btn-close"
+            aria-label="Close"
+          >
+            Close
+          </button>
+          <img 
+            src={currentProject.image} 
+            alt={currentProject.title}
+            style={modalStyle} 
+          />
+          <p>Summary: {currentProject.description}</p>
+          <p>Made using: {currentProject.tech}</p>
+        </div>
+      </Modal>
     </div>
   );
 }

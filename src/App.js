@@ -1,37 +1,33 @@
 import React, { useState } from "react";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav/index.js";
-import Content from './components/Content'
-
+import Content from "./components/Content";
 
 function App() {
   const navCategories = [
     {
       name: "about",
-      text: "About Me"
+      text: "About Me",
     },
     {
       name: "projects",
-      text: "Projects"
-
+      text: "Projects",
     },
     {
       name: "resume",
-      text: "Resume"
-
+      text: "Resume",
     },
     {
       name: "contact",
-      text: "Contact Me"
-
+      text: "Contact Me",
     },
   ];
 
   const [currentCategory, setCurrentCategory] = useState(navCategories[0]);
 
   const pageStyle = {
-    paddingBottom: '5rem'
-  }
+    paddingBottom: "5rem",
+  };
   return (
     <div style={pageStyle}>
       <Nav
@@ -39,15 +35,14 @@ function App() {
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       />
-      <main> 
+      <main>
         <div className="container">
-                  <Content
-          currentCategory={currentCategory}
-          setCurrentCategory={setCurrentCategory}
-          navCategories={navCategories}
-        />
+          <Content
+            currentCategory={currentCategory}
+            setCurrentCategory={setCurrentCategory}
+            navCategories={navCategories}
+          />
         </div>
-
       </main>
       <Footer />
     </div>

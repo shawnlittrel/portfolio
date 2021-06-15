@@ -1,9 +1,12 @@
 import React from "react";
 
-function Modal({ currentProject, onRequestClose }) {
+
+function ProjectModal({ currentProject, onRequestClose }) {
   const { title, description, tech, image } = currentProject;
 
   const closeModal = onRequestClose;
+
+  
 
   return (
     <div>
@@ -23,4 +26,4 @@ function Modal({ currentProject, onRequestClose }) {
   );
 }
 
-export default Modal;
+export default ProjectModal;

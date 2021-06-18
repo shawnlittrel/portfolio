@@ -17,7 +17,7 @@ function About(props) {
         <br />
         {filteredSkills.map((skill) => (
           <span
-            className="badge rounded-pill bg-success text-light"
+            className="badge rounded-pill skill-badge text-light"
             key={skill.name}
           >
             {skill.name}
@@ -106,7 +106,7 @@ function About(props) {
             found that I pick up this new information fairly quickly and really
             enjoy doing it. When I sit down to work on a particular assignment,
             the time seems to fly by while I problem-solve and research ways to
-            accomplish what I want to do. I hope that my work below shows my
+            accomplish what I want to do. I hope that my included work shows my
             committment to excellence.
           </p>
         </div>

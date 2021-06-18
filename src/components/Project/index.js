@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 
 function Projects() {
-
   //log all projects available for display
   const projectList = [
     {
@@ -11,6 +10,7 @@ function Projects() {
       tech: "React",
       image: "images/oh-snap.JPG",
       type: "frontend",
+      github: "https://github.com/shawnlittrel/oh-snap",
     },
     {
       title: "Budget Tracker",
@@ -19,6 +19,8 @@ function Projects() {
       tech: "HTML, CSS, Express.js, MongoDB, Mongoose, IndexedDB",
       image: "images/budget-tracker.JPG",
       type: "fullstack",
+      github: "https://github.com/shawnlittrel/budget-tracker",
+      live: "https://radiant-tor-99647.herokuapp.com/",
     },
     {
       title: "Social Network API",
@@ -27,6 +29,7 @@ function Projects() {
       tech: "JavaScript, Express.js, MongoDB, Mongoose",
       image: "images/social-network-api.gif",
       type: "backend",
+      github: "https://github.com/shawnlittrel/social-network-api",
     },
     {
       title: "Campfire",
@@ -35,6 +38,8 @@ function Projects() {
       tech: "HTML, custom CSS, JavaScript, Handlebars, Express.js, Faker.js, mySQL",
       image: "images/campfire.JPG",
       type: "fullstack",
+      github: "https://github.com/pahlzachary/group-of-friends",
+      live: "https://secret-bastion-06521.herokuapp.com/",
     },
     {
       title: "Tech Blog",
@@ -43,6 +48,8 @@ function Projects() {
       tech: "HTML, Materialize CSS, Handlebars, mySQL",
       image: "images/tech-blog.JPG",
       type: "fullstack",
+      github: "https://github.com/shawnlittrel/tech-blog-mvc",
+      live: "https://shawns-tech-blog.herokuapp.com/",
     },
     {
       title: "Notebook",
@@ -50,6 +57,7 @@ function Projects() {
       tech: "HTML, Materialize CSS, JavaScript, Express.js",
       image: "images/notebook.JPG",
       type: "fullstack",
+      github: "https://github.com/shawnlittrel/notebook",
     },
     {
       title: "Jobless",
@@ -58,6 +66,8 @@ function Projects() {
       tech: "HTML, Foundation CSS, JavaScript, jQuery, Google Search API, CareerOneStop API",
       image: "images/jobless.jpg",
       type: "fullstack",
+      github: "https://github.com/merriammassey/job-search",
+      live: "merriammassey.github.io/job-search",
     },
   ];
 
@@ -78,8 +88,8 @@ function Projects() {
   //manual styling for modal
   const modalStyle = {
     width: "100%",
-    height: "auto"
-  }
+    height: "auto",
+  };
 
   //determine current project
   const [currentProject, setCurrentProject] = useState({
@@ -99,8 +109,7 @@ function Projects() {
   }
 
   //sync and access references
-  function afterOpenModal() {
-  }
+  function afterOpenModal() {}
 
   //function to close Modal
   function closeModal() {
@@ -108,34 +117,43 @@ function Projects() {
   }
 
   //determine list of projects to display on page
-  const [filteredProject, setFilteredProject] = useState(projectList)
+  const [filteredProject, setFilteredProject] = useState(projectList);
 
-//filter projects based on button clicked
-function projectFilter(stack) {
-
-  switch(stack) {
-    case 'all':
-      setFilteredProject(projectList);
-      break;
-    case 'frontend':
-       setFilteredProject(projectList.filter((project) => project.type ==='frontend'));
-       break;
-    case 'backend':
-        setFilteredProject(projectList.filter((project) => project.type === 'backend'));
+  //filter projects based on button clicked
+  function projectFilter(stack) {
+    switch (stack) {
+      case "all":
+        setFilteredProject(projectList);
         break;
-    case 'fullstack':
-        setFilteredProject(projectList.filter((project) => project.type === 'fullstack'));
+      case "frontend":
+        setFilteredProject(
+          projectList.filter((project) => project.type === "frontend")
+        );
         break;
-    default:
-       setFilteredProject(projectList);
-}};
-
+      case "backend":
+        setFilteredProject(
+          projectList.filter((project) => project.type === "backend")
+        );
+        break;
+      case "fullstack":
+        setFilteredProject(
+          projectList.filter((project) => project.type === "fullstack")
+        );
+        break;
+      default:
+        setFilteredProject(projectList);
+    }
+  }
 
   return (
     <div className="container">
       <div className="row" key="firstRow">
         <div className="col" key="colA">
-          <div className="buttonContainer" style={buttonStyle} key="buttonContainer">
+          <div
+            className="buttonContainer"
+            style={buttonStyle}
+            key="buttonContainer"
+          >
             <h4 key="filterText">Filter By:</h4>
             <div
               className="btn-group-vertical"
@@ -143,16 +161,44 @@ function projectFilter(stack) {
               aria-label="Stack Filter"
               key="buttonGroup"
             >
-              <button type="button" className="btn btn-primary" key="all" onClick={() => {projectFilter('all')}}>
+              <button
+                type="button"
+                className="btn btn-all"
+                key="all"
+                onClick={() => {
+                  projectFilter("all");
+                }}
+              >
                 All
               </button>
-              <button type="button" className="btn btn-danger" key="frontend" onClick={() => {projectFilter('frontend')}}>
+              <button
+                type="button"
+                className="btn btn-frontend"
+                key="frontend"
+                onClick={() => {
+                  projectFilter("frontend");
+                }}
+              >
                 Front End
               </button>
-              <button type="button" className="btn btn-warning" key="backend" onClick={() => {projectFilter('backend')}}>
+              <button
+                type="button"
+                className="btn btn-backend"
+                key="backend"
+                onClick={() => {
+                  projectFilter("backend");
+                }}
+              >
                 Back End
               </button>
-              <button type="button" className="btn btn-success" key="fullstack" onClick={() => {projectFilter('fullstack')}}>
+              <button
+                type="button"
+                className="btn btn-all"
+                key="fullstack"
+                onClick={() => {
+                  projectFilter("fullstack");
+                }}
+              >
                 Full Stack
               </button>
             </div>
@@ -160,7 +206,11 @@ function projectFilter(stack) {
         </div>
         <div className="col-sm-11" key="projectWrapper">
           {filteredProject.map((project, i) => (
-            <div className="card-wrapper" style={cardStyle} key={`project${i}Wrapper`}>
+            <div
+              className="card-wrapper"
+              style={cardStyle}
+              key={`project${i}Wrapper`}
+            >
               <div
                 className="card"
                 key={`project${i}Card`}
@@ -175,7 +225,13 @@ function projectFilter(stack) {
                   alt={project.title}
                   key={`project${i}Img`}
                 />
-                <h5 className="card-title" key={`project${i}Header`}>{project.title}</h5>
+                <br />
+                <h5
+                  className="card-title text-center"
+                  key={`project${i}Header`}
+                >
+                  {project.title}
+                </h5>
               </div>
             </div>
           ))}
@@ -191,34 +247,58 @@ function projectFilter(stack) {
         <div key="modalWrapper">
           <h2 key="modalHeader">{currentProject.title}</h2>
           <div className="d-grid gap-2 d-md-flex justify-content-end">
-          <button
-            type="button"
-            onClick={closeModal}
-            className="btn-danger"
-            aria-label="Close"
-            key="modalClose"
-          >
-            Close
-          </button>
+            <button
+              type="button"
+              onClick={closeModal}
+              className="btn-danger"
+              aria-label="Close"
+              key="modalClose"
+            >
+              Close
+            </button>
           </div>
-          <img 
-            src={currentProject.image} 
+          <img
+            src={currentProject.image}
             alt={currentProject.title}
             style={modalStyle}
             key="modalImg"
           />
-          <p key="modalSummary" className="display-6 text-center">Summary: {currentProject.description}</p>
-          <p key="modalTech" className="lead text-center">Made using: {currentProject.tech}</p>
-          <div className="d-grid gap-2 d-md-flex justify-content-end">
-          <button
-            type="button"
-            onClick={closeModal}
-            className="btn-danger"
-            aria-label="Close"
-            key="modalClose"
+          <p key="modalSummary" className="display-6 text-center">
+            Summary: {currentProject.description}
+          </p>
+          <p key="modalTech" className="lead text-center">
+            Made using: {currentProject.tech}
+          </p>
+          <a
+            className="thirds-text"
+            href={currentProject.github}
+            target="_blank"
+            rel="noreferrer"
+            key={currentProject.github}
           >
-            Close
-          </button>
+            Github Repository
+          </a>
+          {currentProject.live && (
+            <a
+              className="thirds-text"
+              href={currentProject.live}
+              target="_blank"
+              rel="noreferrer"
+              key={currentProject.live}
+            >
+              Live Application
+            </a>
+          )}
+          <div className="d-grid gap-2 d-md-flex justify-content-end">
+            <button
+              type="button"
+              onClick={closeModal}
+              className="btn-danger"
+              aria-label="Close"
+              key="modalClose"
+            >
+              Close
+            </button>
           </div>
         </div>
       </Modal>

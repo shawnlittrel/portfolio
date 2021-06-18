@@ -1,68 +1,74 @@
+.nav-item{
+    color: white;
+}
+
+.nav-link{
+    color: white;
+    font-family: "roboto", cursive;
+    font-size: 1.5rem;
+}
+
+div > div > nav > ul > li > a:hover{
+    background-color: #f2e29f;
+    color: white;
+}
+
 .thirds-title{
-    background-color: rgba(69, 66, 66, 0.7);
+    background-color: rgba(166, 150, 88, 0.85);
     font-family: "Cinzel decorative", cursive;
     font-size: 2rem;
+    color: white;
 }
 
-.section-title{
-    font-family: "Cinzel decorative", cursive;
-    color: 795c5f;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px black, 0 0 15px white;
-    font-size: 3rem; 
+.thirds-title h3 {
+    color: white;
 }
-
 .thirds-text{
-    background-color: rgba(69, 66, 66, 0.7);
+    background-color: rgba(166, 150, 88, 0.85);
+    font-family: "Roboto", cursive;
+    color: white;
+    font-size: 1.1rem;
+    padding: 5px;
+}
+
+.skill-badge{
+    font-size: 1.3rem;
+    margin: 3px;
+    background-color: #795C5F;
+}
+
+.btn-all{
+    background-color: #795C5F;
+    color: white;
+}
+
+.btn-frontend{
+    background-color: #a69658;
+    color: white;
+}
+
+.btn-backend{
+    background-color: #d9b26f;
+    color: white;
+}
+
+.btn-fullstack{
+    background-color: #fadf7f;
+    color: white;
+}
+
+.message-title{
+    font-family: "Cinzel decorative", cursive;
+    font-size: 2rem;
+    color:white;
+}
+
+.message-text{
     font-family: "Roboto", cursive;
     color: white;
     font-size: 1.1rem;
 }
 
-.columnImg{
-    border: rgb(69, 66, 66) 10px solid;
-    width: 80%;
-    box-shadow: 5px, 5px;
-}
-
-.carousel-item{
-    height: 600px;
-}
-
-.item img{
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    min-height: 400px;
-}
-.carouselText{
-    color: #17a2b8;
-    background-color: rgba(53, 51, 51, 0.9);
-}
-
-
-.contact-text{
-    text-decoration: none;
-    font-family: "Roboto", cursive;
-    color: #17a2b8;
-    font-size: 1.3rem;
-}
-
-.contact-item{
-    background-color:rgba(53, 51, 51, 0.9);
-}
-
-.attention{
-    font-size: 1.5rem;
-}
-
-.badge{
-    font-size: 1.3rem;
-    margin: 3px;
-}
-
-
-#gitLink{
-    text-decoration: none;
+.contactWrapper{
+    background-color: rgba(166, 150, 88, 0.85); 
 }

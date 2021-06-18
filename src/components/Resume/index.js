@@ -57,11 +57,12 @@ function Resume(props) {
 
   return (
     <div className="container">
-      <h3 className="text-center" key="summaryHeader">Summary:</h3>
-      <p className="justify-content-center" key="summaryText">{summary}</p>
+      <h3 className="text-center thirds-title" key="summaryHeader">Summary:</h3>
+      <p className="justify-content-center thirds-text" key="summaryText">{summary}</p>
       <br />
-      <h3 className="text-center" key="skillsHeader">Technical Skills:</h3>
-      <p key="skillsFrontEnd">
+      <h3 className="text-center thirds-title" key="skillsHeader">Technical Skills:</h3>
+      <div className="thirds-text" key="skillsContainer">
+              <p key="skillsFrontEnd">
         <strong>Front End:</strong> {frontEndSkillsNames.join(', ')}
       </p>
       <p key="skillsBackEnd">
@@ -70,10 +71,12 @@ function Resume(props) {
       <p key="skillsOther">
         <strong>Other:</strong> {otherSkillsNames.join(', ')}
       </p>
+      </div>
+
       <br />
-      <h3 className="justify-content-center" key="experienceHeader">Experience</h3>
+      <h3 className="text-center thirds-title" key="experienceHeader">Experience:</h3>
       {experience.map((job, i) => (
-        <div className="container" key={`${i}Container`}>
+        <div className="container thirds-text" key={`${i}Container`}>
           <div className="row" key={`${i}RowA`}>
             <div className="col s6" key={`${i}ColA`}>
               <h4 className="text-start" key={`${i}Role`}>{job.role}</h4>
@@ -89,9 +92,10 @@ function Resume(props) {
           </div>
         </div>
       ))}
-      <h3 className="justify-content-center" key="educationHeader">Education</h3>
+      <br />
+      <h3 className="text-center thirds-title" key="educationHeader">Education</h3>
       {educationObj.map((ed, i) => (
-        <div className="container" key={`ed${i}Container`}>
+        <div className="container thirds-text" key={`ed${i}Container`}>
           <div className="row" key={`ed${i}RowA`}>
             <div className="col s4 text-start" key={`ed${i}ColA`}>
               <strong>{ed.name}</strong>

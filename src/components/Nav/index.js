@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Nav(props) {
   const { navCategories, setCurrentCategory } = props;
 
+  // //monitor active nav button
+  // const [activeClass, setActiveClass] = useState(false);
+  // function toggleClass(target) {
+    
+  //   setActiveClass(!activeClass);
+
+
   return (
+    <div className="container">
     <nav>
-      <ul className="nav nav-pills justify-content-center">
+      <ul className="nav nav-justified">
         {navCategories.map((c) => (
           <li className="nav-item" key={c.name}>
             <a
@@ -21,6 +29,7 @@ function Nav(props) {
         ))}
       </ul>
     </nav>
+    </div>
   );
 }
 

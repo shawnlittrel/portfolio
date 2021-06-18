@@ -154,7 +154,7 @@ function Projects() {
             style={buttonStyle}
             key="buttonContainer"
           >
-            <h4 key="filterText">Filter By:</h4>
+            <h4 key="filterText" className="thirds-text text-center">Filter By:</h4>
             <div
               className="btn-group-vertical"
               role="group"

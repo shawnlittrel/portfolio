@@ -1,9 +1,9 @@
-import { auto } from "async";
 import React, { useState } from "react";
 import Modal from "react-modal";
 
 function Projects() {
-  //log all projects we want to display
+
+  //log all projects available for display
   const projectList = [
     {
       title: "Oh-Snap",
@@ -93,6 +93,7 @@ function Projects() {
   //monitor status of modal visibility
   const [modalIsOpen, setIsOpen] = useState(false);
 
+  //function to open Modal
   function openModal() {
     setIsOpen(true);
   }
@@ -101,46 +102,68 @@ function Projects() {
   function afterOpenModal() {
   }
 
+  //function to close Modal
   function closeModal() {
     setIsOpen(false);
   }
 
+  //determine list of projects to display on page
+  const [filteredProject, setFilteredProject] = useState(projectList)
 
+//filter projects based on button clicked
+function projectFilter(stack) {
 
-  //const projectFilter = projectList.filter((project) => projectList.type === type);
+  switch(stack) {
+    case 'all':
+      setFilteredProject(projectList);
+      break;
+    case 'frontend':
+       setFilteredProject(projectList.filter((project) => project.type ==='frontend'));
+       break;
+    case 'backend':
+        setFilteredProject(projectList.filter((project) => project.type === 'backend'));
+        break;
+    case 'fullstack':
+        setFilteredProject(projectList.filter((project) => project.type === 'fullstack'));
+        break;
+    default:
+       setFilteredProject(projectList);
+}};
+
 
   return (
     <div className="container">
-      <div className="row">
-        <div className="col">
-          <div className="buttonContainer" style={buttonStyle}>
-            <h4>Filter By:</h4>
+      <div className="row" key="firstRow">
+        <div className="col" key="colA">
+          <div className="buttonContainer" style={buttonStyle} key="buttonContainer">
+            <h4 key="filterText">Filter By:</h4>
             <div
               className="btn-group-vertical"
               role="group"
               aria-label="Stack Filter"
+              key="buttonGroup"
             >
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary" key="all" onClick={() => {projectFilter('all')}}>
                 All
               </button>
-              <button type="button" className="btn btn-danger">
+              <button type="button" className="btn btn-danger" key="frontend" onClick={() => {projectFilter('frontend')}}>
                 Front End
               </button>
-              <button type="button" className="btn btn-warning">
+              <button type="button" className="btn btn-warning" key="backend" onClick={() => {projectFilter('backend')}}>
                 Back End
               </button>
-              <button type="button" className="btn btn-success">
+              <button type="button" className="btn btn-success" key="fullstack" onClick={() => {projectFilter('fullstack')}}>
                 Full Stack
               </button>
             </div>
           </div>
         </div>
-        <div className="col-sm-11">
-          {projectList.map((project, i) => (
-            <div className="card-wrapper" style={cardStyle}>
+        <div className="col-sm-11" key="projectWrapper">
+          {filteredProject.map((project, i) => (
+            <div className="card-wrapper" style={cardStyle} key={`project${i}Wrapper`}>
               <div
                 className="card"
-                key={i}
+                key={`project${i}Card`}
                 onClick={() => {
                   setCurrentProject(projectList[i]);
                   openModal();
@@ -150,8 +173,9 @@ function Projects() {
                   className="card-img-top"
                   src={project.image}
                   alt={project.title}
+                  key={`project${i}Img`}
                 />
-                <h5 className="card-title">{project.title}</h5>
+                <h5 className="card-title" key={`project${i}Header`}>{project.title}</h5>
               </div>
             </div>
           ))}
@@ -162,24 +186,27 @@ function Projects() {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         currentProject={currentProject}
+        key={`projectModal`}
       >
-        <div>
-          <h2>{currentProject.title}</h2>
+        <div key="modalWrapper">
+          <h2 key="modalHeader">{currentProject.title}</h2>
           <button
             type="button"
             onClick={closeModal}
             class="btn-close"
             aria-label="Close"
+            key="modalClose"
           >
             Close
           </button>
           <img 
             src={currentProject.image} 
             alt={currentProject.title}
-            style={modalStyle} 
+            style={modalStyle}
+            key="modalImg"
           />
-          <p>Summary: {currentProject.description}</p>
-          <p>Made using: {currentProject.tech}</p>
+          <p key="modalSummary">Summary: {currentProject.description}</p>
+          <p key="modalTech">Made using: {currentProject.tech}</p>
         </div>
       </Modal>
     </div>

@@ -1,6 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Resume() {
+function Resume(props) {
+  const { skills } = props;
+
+  //filter and access names of front end skills
+  const frontEndSkillsObj = skills.filter((skill) => skill.type === 'frontend');
+  const frontEndSkillsNames = Object.values(frontEndSkillsObj).map(skill => skill.name);
+
+  //filter and access names of backend skills
+  const backEndSkillsObj = skills.filter((skill) => skill.type === 'backend');
+  const backEndSkillsNames = Object.values(backEndSkillsObj).map(skill => skill.name);
+
+  //filter and access names of other skills
+  const otherSkillsObj = skills.filter((skill) => skill.type === 'other');
+  const otherSkillsNames = Object.values(otherSkillsObj).map(skill => skill.name);
+
+//filter education
+  const educationObj = skills.filter((skill) => skill.type === 'degree' || skill.type === 'certificate');
+
   const summary = `Committed automation programmer and project manager, now aspiring to
      develop extraordinary web applications. Background in home and
      commercial AV and systems engineering provides experience meeting tight,
@@ -38,62 +55,49 @@ function Resume() {
    },
   ];
 
-  const education = [
-    {
-      degree: "Certificate",
-      school: "University of Arizona",
-      date: "In Progress",
-    },
-    {
-      degree: "BS, Electronics Engineering Technology",
-      school: "Hamilton Technical College",
-      date: "2014",
-    },
-  ];
   return (
     <div className="container">
-      <h3 className="text-center">Summary:</h3>
-      <p className="justify-content-center">{summary}</p>
+      <h3 className="text-center" key="summaryHeader">Summary:</h3>
+      <p className="justify-content-center" key="summaryText">{summary}</p>
       <br />
-      <h3 className="text-center">Technical Skills:</h3>
-      <p>
-        <strong>Front End:</strong> JavaScript ES6, HTML5, CSS3, Handlebars,
-        React, jQuery
+      <h3 className="text-center" key="skillsHeader">Technical Skills:</h3>
+      <p key="skillsFrontEnd">
+        <strong>Front End:</strong> {frontEndSkillsNames.join(', ')}
       </p>
-      <p>
-        <strong>Back End:</strong> SQL, MySQL, NoSQL, Express.js, Node.js, AJAX
+      <p key="skillsBackEnd">
+        <strong>Back End:</strong> {backEndSkillsNames.join(', ')}
       </p>
-      <p>
-        <strong>Other:</strong> Github, Heroku, Webpack, Regex
+      <p key="skillsOther">
+        <strong>Other:</strong> {otherSkillsNames.join(', ')}
       </p>
       <br />
-      <h3 className="justify-content-center">Experience</h3>
-      {experience.map((job) => (
-        <div className="container">
-          <div className="row">
-            <div className="col s6">
-              <h4 className="text-start">{job.role}</h4>
-              <h5 className="text-start">{job.employer}</h5>
+      <h3 className="justify-content-center" key="experienceHeader">Experience</h3>
+      {experience.map((job, i) => (
+        <div className="container" key={`${i}Container`}>
+          <div className="row" key={`${i}RowA`}>
+            <div className="col s6" key={`${i}ColA`}>
+              <h4 className="text-start" key={`${i}Role`}>{job.role}</h4>
+              <h5 className="text-start" key={`${i}Employer`}>{job.employer}</h5>
             </div>
-            <div className="col s6">
-              <h4 className="text-end">{job.date}</h4>
-              <h5 className="text-end">{job.location}</h5>
+            <div className="col s6" key={`${i}ColB`}>
+              <h4 className="text-end" key={`${i}Date`}>{job.date}</h4>
+              <h5 className="text-end" key={`${i}Location`}>{job.location}</h5>
             </div>
           </div>
-          <div className="row">
-            <p>{job.description}</p>
+          <div className="row" key={`${i}RowB`}>
+            <p key={`${i}Description`}>{job.description}</p>
           </div>
         </div>
       ))}
-      <h3 className="justify-content-center">Education</h3>
-      {education.map((ed) => (
-        <div className="container">
-          <div className="row">
-            <div className="col s4 text-start">
-              <strong>{ed.degree}</strong>
+      <h3 className="justify-content-center" key="educationHeader">Education</h3>
+      {educationObj.map((ed, i) => (
+        <div className="container" key={`ed${i}Container`}>
+          <div className="row" key={`ed${i}RowA`}>
+            <div className="col s4 text-start" key={`ed${i}ColA`}>
+              <strong>{ed.name}</strong>
             </div>
-            <div className="col s4 text-center">{ed.school}</div>
-            <div className="col s4 text-end">{ed.date}</div>
+            <div className="col s4 text-center" key={`ed${i}School`}>{ed.school}</div>
+            <div className="col s4 text-end" key={`ed${i}Date`}>{ed.date}</div>
           </div>
         </div>
       ))}

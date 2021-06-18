@@ -23,6 +23,7 @@ function App() {
     },
   ];
 
+
   const [currentCategory, setCurrentCategory] = useState(navCategories[0]);
 
   const pageStyle = {

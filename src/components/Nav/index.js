@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import React from "react";
 
 function Nav(props) {
-  const { navCategories, setCurrentCategory, currentCategory } = props;
+  const { navCategories, setCurrentCategory } = props;
 
   return (
     <nav>

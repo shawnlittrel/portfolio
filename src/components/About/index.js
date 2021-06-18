@@ -1,59 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-function About() {
-  const [skills] = useState([
-    {
-      name: "BS Electronics Engineering",
-    },
-    {
-      name: "Microsoft MTA - SQL",
-    },
-    {
-      name: "HTML5",
-    },
-    {
-      name: "CSS",
-    },
-    {
-      name: "CSS Frameworks",
-    },
-    {
-      name: "React",
-    },
-    {
-      name: "JavaScript ES6+",
-    },
-    {
-      name: "jQuery",
-    },
-    {
-      name: "AJAX",
-    },
-    {
-      name: "Node.js",
-    },
-    {
-      name: "Express.js",
-    },
-    {
-      name: "SQL",
-    },
-    {
-      name: "noSQL",
-    },
-    {
-      name: "MongoDB",
-    },
-    {
-      name: "Webpack",
-    },
-    {
-      name: "Git",
-    },
-    {
-      name: "Heroku",
-    },
-  ]);
+function About(props) {
+  const { skills } = props;
+
+  //filter skills from master list
+  const filteredSkills = skills.filter((skill) => skill.type === 'frontend' || skill.type === 'backend' || skill.type === 'other');
+
 
   return (
     <div className="row">
@@ -63,7 +15,7 @@ function About() {
         </div>
         <br />
         <br />
-        {skills.map((skill) => (
+        {filteredSkills.map((skill) => (
           <span
             className="badge rounded-pill bg-success text-light"
             key={skill.name}

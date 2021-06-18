@@ -43,67 +43,68 @@ function Contact() {
   }
   return (
     <div className="componentWrapper">
-    <div className="contactWrapper row">
-      <h2 className="message-title text-center"> Send me a message!</h2>
-      <div className="message-text" key="msgWrapper">
-        <div className="mb-3">
-          <label htmlFor="nameInput" className="form-label">
-            Name:
-          </label>
-          <input
-            type="name"
-            className="form-control"
-            id="nameInput"
-            placeholder="Your Name"
-            onChange={(event) => setName(event.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="emailInput" className="form-label">
-            Email Address:
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="emailInput"
-            placeholder="name@email.com"
-            required
-            onChange={(event) => setEmail(event.target.value)}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="messageInput" className="form-label">
-            Message:
-          </label>
-          <textarea
-            className="form-control"
-            id="messageInput"
-            rows="5"
-            required
-            onChange={(event) => setMessage(event.target.value)}
-          />
-        </div>
-        <br />
-        <div className="d-grid d-md-flex justify-content-end">
-          <button type="button" className="btn btn-all text-light" onClick={sendEmail}>
-            <i className="bi bi-check2-circle"></i> Send
-          </button>
+      <div className="contactWrapper row">
+        <h2 className="message-title text-center"> Send me a message!</h2>
+        <div className="message-text" key="msgWrapper">
+          <div className="mb-3">
+            <label htmlFor="nameInput" className="form-label">
+              Name:
+            </label>
+            <input
+              type="name"
+              className="form-control"
+              id="nameInput"
+              placeholder="Your Name"
+              onChange={(event) => setName(event.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="emailInput" className="form-label">
+              Email Address:
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="emailInput"
+              placeholder="name@email.com"
+              required
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="messageInput" className="form-label">
+              Message:
+            </label>
+            <textarea
+              className="form-control"
+              id="messageInput"
+              rows="5"
+              required
+              onChange={(event) => setMessage(event.target.value)}
+            />
+          </div>
+          <br />
+          <div className="d-grid d-md-flex justify-content-end">
+            <button
+              type="button"
+              className="btn btn-all text-light"
+              onClick={sendEmail}
+            >
+              <i className="bi bi-check2-circle"></i> Send
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <br />
-    <div className="row align-items-center">
-      <div className="col">
-        <img key="leftImg" src="images/leftImg.jpg"></img>
+      <br />
+      <div className="row align-items-center">
+        <div className="col">
+          <img key="leftImg" src="images/leftImg.jpg" alt="" />
+        </div>
+        <div className="col justify-content-center">
+          <img key="rightImg" src="images/rightImg.jpg" alt="" />
+        </div>
       </div>
-      <div className="col justify-content-center">
-        <img 
-        key="rightImg" 
-        src="images/rightImg.jpg"
-        />
-      </div>
-    </div>
     </div>
   );
 }

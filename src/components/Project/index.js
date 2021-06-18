@@ -8,7 +8,7 @@ function Projects() {
       title: "Oh-Snap",
       description: "A React SPA portfolio for a photographer.",
       tech: "React",
-      image: "images/oh-snap.JPG",
+      image: "/images/oh-snap.JPG",
       type: "frontend",
       github: "https://github.com/shawnlittrel/oh-snap",
     },
@@ -17,7 +17,7 @@ function Projects() {
       description:
         "A PWA used to track expenses.  The app can be used online or offline, and will make all API requests when an internet connection is detected.",
       tech: "HTML, CSS, Express.js, MongoDB, Mongoose, IndexedDB",
-      image: "images/budget-tracker.JPG",
+      image: "/images/budget-tracker.JPG",
       type: "fullstack",
       github: "https://github.com/shawnlittrel/budget-tracker",
       live: "https://radiant-tor-99647.herokuapp.com/",
@@ -27,7 +27,7 @@ function Projects() {
       description:
         "An API for a simple social network that allows addition and deletion of friends.  Users can record thoughts, and friends can reply to those thoughts.",
       tech: "JavaScript, Express.js, MongoDB, Mongoose",
-      image: "images/social-network-api.gif",
+      image: "/images/social-network-api.gif",
       type: "backend",
       github: "https://github.com/shawnlittrel/social-network-api",
     },
@@ -36,7 +36,7 @@ function Projects() {
       description:
         "A proof of concept for an app that allows users to find groups near them to join for any given activity.",
       tech: "HTML, custom CSS, JavaScript, Handlebars, Express.js, Faker.js, mySQL",
-      image: "images/campfire.JPG",
+      image: "/images/campfire.JPG",
       type: "fullstack",
       github: "https://github.com/pahlzachary/group-of-friends",
       live: "https://secret-bastion-06521.herokuapp.com/",
@@ -46,7 +46,7 @@ function Projects() {
       description:
         "A full-stack application to blog about news, notes, and developments.",
       tech: "HTML, Materialize CSS, Handlebars, mySQL",
-      image: "images/tech-blog.JPG",
+      image: "/images/tech-blog.JPG",
       type: "fullstack",
       github: "https://github.com/shawnlittrel/tech-blog-mvc",
       live: "https://shawns-tech-blog.herokuapp.com/",
@@ -55,7 +55,7 @@ function Projects() {
       title: "Notebook",
       description: "A web app used to take and save notes.",
       tech: "HTML, Materialize CSS, JavaScript, Express.js",
-      image: "images/notebook.JPG",
+      image: "/images/notebook.JPG",
       type: "fullstack",
       github: "https://github.com/shawnlittrel/notebook",
     },
@@ -64,7 +64,7 @@ function Projects() {
       description:
         "An app that allows users to research job listings in a given area, then compare that listing with Bureau of Labor Statistics data on salary, job outlook, etc.",
       tech: "HTML, Foundation CSS, JavaScript, jQuery, Google Search API, CareerOneStop API",
-      image: "images/jobless.jpg",
+      image: "/images/jobless.jpg",
       type: "fullstack",
       github: "https://github.com/merriammassey/job-search",
       live: "merriammassey.github.io/job-search",

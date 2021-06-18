@@ -99,10 +99,10 @@ function Contact() {
       <br />
       <div className="row align-items-center">
         <div className="col">
-          <img key="leftImg" src="images/leftImg.jpg" alt="" />
+          <img key="leftImg" src="/images/leftImg.jpg" alt="" />
         </div>
         <div className="col justify-content-center">
-          <img key="rightImg" src="images/rightImg.jpg" alt="" />
+          <img key="rightImg" src="/images/rightImg.jpg" alt="" />
         </div>
       </div>
     </div>

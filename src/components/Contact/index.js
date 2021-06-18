@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+//import Toast from "react-bootstrap/Toast";
 
 function Contact() {
   //initialize form with EmailJS user
@@ -9,6 +10,9 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  //const [showToast, setShowToast] = useState(false);
+  //const toggleShowToast = () => setShowToast(!showToast);
+  //TODO: Get toasts working
 
   //function to send email on submit
   function sendEmail() {
@@ -27,7 +31,8 @@ function Contact() {
       )
       .then(
         (response) => {
-          alert("Email successfully sent!");
+          //toggleShowToast();
+          alert("Email sent successfully!");
           console.log("Status: ", response.status);
           console.log("Message: ", response.message);
         },

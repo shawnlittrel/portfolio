@@ -28,6 +28,7 @@ function App() {
 
   const pageStyle = {
     paddingBottom: "5rem",
+    backgroundImage: `url(/images/woodBG.jpg)`
   };
   return (
     <div style={pageStyle}>

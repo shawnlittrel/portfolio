@@ -190,23 +190,36 @@ function projectFilter(stack) {
       >
         <div key="modalWrapper">
           <h2 key="modalHeader">{currentProject.title}</h2>
+          <div className="d-grid gap-2 d-md-flex justify-content-end">
           <button
             type="button"
             onClick={closeModal}
-            class="btn-close"
+            className="btn-danger"
             aria-label="Close"
             key="modalClose"
           >
             Close
           </button>
+          </div>
           <img 
             src={currentProject.image} 
             alt={currentProject.title}
             style={modalStyle}
             key="modalImg"
           />
-          <p key="modalSummary">Summary: {currentProject.description}</p>
-          <p key="modalTech">Made using: {currentProject.tech}</p>
+          <p key="modalSummary" className="display-6 text-center">Summary: {currentProject.description}</p>
+          <p key="modalTech" className="lead text-center">Made using: {currentProject.tech}</p>
+          <div className="d-grid gap-2 d-md-flex justify-content-end">
+          <button
+            type="button"
+            onClick={closeModal}
+            className="btn-danger"
+            aria-label="Close"
+            key="modalClose"
+          >
+            Close
+          </button>
+          </div>
         </div>
       </Modal>
     </div>

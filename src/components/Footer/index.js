@@ -23,6 +23,13 @@ function Footer() {
           <i className="bi bi-linkedin"></i>
         </a>
       </li>
+      <li className="nav-item">
+        <a
+          className="nav-link"
+          href="mailto:shawnlittrel@gmail.com?subject=Your Work Looks Great!">
+            <i className="bi bi-envelope"></i>
+          </a>
+      </li>
     </ul>
   );
 }

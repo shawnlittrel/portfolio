@@ -23,6 +23,9 @@ function About(props) {
             <h3>Skills and Certs</h3>
           </div>
           <br />
+          <p className="badge rounded-pill skill-badge text-light"> BS Electronics Engineering Technology</p>
+          <p className="badge rounded-pill skill-badge text-light"> Certificate Full Stack Web Development</p>
+          <p className="badge rounded-pill skill-badge text-light"> Microsoft MTA- Database Fundamentals</p>
           <br />
           {filteredSkills.map((skill) => (
             <span

@@ -26,11 +26,18 @@ function Resume(props) {
     (skill) => skill.type === "degree" || skill.type === "certificate"
   );
 
-  const summary = `Committed automation programmer and project manager, now aspiring to develop extraordinary web applications.  Certificate in Full Stack Web Development and Microsoft MTA in Database Fundamentals.  Background in home and commercial AV and systems engineering provides experience meeting tight, moving deadlines, teamwork, customer training and satisfaction, and project lifecycle management.  Consummate communicator with strong interpersonal skills, and the ability to lead teams to meet and far surpass service, quality, and performance expectations. Superior critical thinking, decision making, people management, and analytical skills.`;
+  const summary = `Committed automation programmer and project manager, excited to develop extraordinary web applications.  Certificate in Full Stack Web Development and Microsoft MTA in Database Fundamentals.  Background in home and commercial AV and systems engineering provides experience meeting tight, moving deadlines, teamwork, customer training and satisfaction, and project lifecycle management.  Consummate communicator with strong interpersonal skills, and the ability to lead teams to meet and far surpass service, quality, and performance expectations. Superior critical thinking, decision making, people management, and analytical skills.`;
 
   const experience = [
     {
-      role: "Security Supervisor",
+      role: "Teaching Assistant",
+      employer: "2U/Trilogy Education Services",
+      location: "Remote",
+      date: "2021-Present",
+      description: "Serve as a teaching assistant for Full Stack Web Development Bootcamp.  Perform administrative tasks such as class repository management, breakout room assignment, and attendance during classes twice per week.  Host office hours three times per week and act as a Subject Matter Expert, teaching and answering questions on HTML, CSS, JavaScript, Node, SQL, noSQL, and React.  Assist students all other times during the week on Slack."
+    },
+    {
+      role: "Field Supervisor",
       employer: "Performance Audio Video",
       location: "Phoenix, AZ",
       date: "2020-Present",

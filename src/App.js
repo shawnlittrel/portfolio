@@ -27,7 +27,9 @@ function App() {
   const [currentCategory, setCurrentCategory] = useState(navCategories[0]);
 
   const pageStyle = {
-    paddingBottom: "5rem",
+    minHeight: "100vh",
+    minWidth: "100vw",
+    paddingBottom: "1px",
     backgroundImage: `url(/images/woodBG.jpg)`
   };
   return (
